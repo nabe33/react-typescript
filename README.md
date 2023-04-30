@@ -12,7 +12,7 @@
     $ node -v
     v12.14.1
 
-## アプリケーションの起動方法(Dockerを使用しない場合)
+## アプリケーションの起動方法(Docker を使用しない場合)
 
 本プロジェクトは、[create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) により作成したアプリケーションから React の学習に最低限必要な機能のみを厳選し、軽量化したものです。
 以下の手順でアプリケーションを起動できます。
@@ -21,9 +21,12 @@
     $ tar zxvf v1.5.tar.gz
     $ cd react-starter-kit-in-typescript-with-node-v12.14.1-1.2
     $ yarn install
+    # nodeのバージョンが新しいとエラーが出るので下記環境変数で一時的に回避
+    $ export NODE_OPTIONS=--openssl-legacy-provider
     $ yarn start
+    # この環境変数を設定するとVSCは起動しないので export NODE_OPTIONS= でクリアする
 
-## アプリケーションの起動方法(Dockerを使用する場合)
+## アプリケーションの起動方法(Docker を使用する場合)
 
     $ wget https://github.com/DiveIntoHacking/react-starter-kit-in-typescript-with-node-v12.14.1/archive/v1.5.tar.gz
     $ tar zxvf v1.5.tar.gz
